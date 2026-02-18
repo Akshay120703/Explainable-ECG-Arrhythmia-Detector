@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explainable ECG Arrhythmia Detector</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🧾 Explainable ECG Arrhythmia Detector</h1>
+            <p class="subtitle">Educational Demo - Frontend Only</p>
+        </header>
+
+        <div class="controls">
+            <h2>Select Rhythm Type</h2>
+            <div class="button-group">
+                <button id="normalBtn" class="rhythm-btn active">Normal Sinus Rhythm</button>
+                <button id="afibBtn" class="rhythm-btn">Atrial Fibrillation</button>
+                <button id="missingPwaveBtn" class="rhythm-btn">Missing P-Wave</button>
+            </div>
+        </div>
+
+        <div class="ecg-container">
+            <canvas id="ecgCanvas"></canvas>
+        </div>
+
+        <div class="analysis-section">
+            <h2>Analysis Results</h2>
+            <div id="analysisOutput" class="analysis-output">
+                <p class="placeholder">Select a rhythm type to begin analysis...</p>
+            </div>
+        </div>
+
+        <div class="metrics-section">
+            <h2>Detected Metrics</h2>
+            <div class="metrics-grid">
+                <div class="metric-card">
+                    <div class="metric-label">R-Peaks Detected</div>
+                    <div id="rPeakCount" class="metric-value">-</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-label">Average R-R Interval</div>
+                    <div id="avgRRInterval" class="metric-value">-</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-label">R-R Variability (SD)</div>
+                    <div id="rrVariability" class="metric-value">-</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-label">P-Wave Present</div>
+                    <div id="pWaveStatus" class="metric-value">-</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
